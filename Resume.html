@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karn Chaudhary - AI ML Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Calibri, Arial, sans-serif;
+            background: #e8e8e8;
+            padding: 15px;
+            color: #000;
+        }
+
+        .resume-container {
+            max-width: 8.5in;
+            min-height: 11in;
+            margin: 0 auto;
+            background: white;
+            padding: 0.45in 0.55in;
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 16px;
+            border-bottom: 3px solid #1a1a1a;
+            padding-bottom: 10px;
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1a1a1a;
+            letter-spacing: 2px;
+            margin-bottom: 6px;
+        }
+
+        .tagline {
+            font-size: 11px;
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .contact {
+            font-size: 10px;
+            color: #444;
+            line-height: 1.4;
+        }
+
+        .section {
+            margin-bottom: 13px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #1a1a1a;
+            padding-bottom: 3px;
+            margin-bottom: 8px;
+        }
+
+        .summary {
+            font-size: 10.5px;
+            color: #2c2c2c;
+            line-height: 1.45;
+            text-align: justify;
+        }
+
+        .item {
+            margin-bottom: 10px;
+            page-break-inside: avoid;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .job-title {
+            font-size: 11.5px;
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+
+        .date {
+            font-size: 10px;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .company {
+            font-size: 10px;
+            color: #2c3e50;
+            font-style: italic;
+            margin-bottom: 3px;
+        }
+
+        .project-header {
+            font-size: 11px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 2px;
+        }
+
+        .tech-stack {
+            font-size: 9.5px;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 3px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 2px;
+        }
+
+        li {
+            font-size: 10px;
+            color: #2c2c2c;
+            margin-bottom: 2px;
+            line-height: 1.4;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 6px 10px;
+            font-size: 10px;
+        }
+
+        .skill-label {
+            font-weight: bold;
+            color: #1a1a1a;
+            white-space: nowrap;
+        }
+
+        .skill-content {
+            color: #2c2c2c;
+        }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .degree {
+            font-size: 11.5px;
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+
+        .university {
+            font-size: 10px;
+            color: #2c3e50;
+            margin-bottom: 2px;
+        }
+
+        .coursework {
+            font-size: 9.5px;
+            color: #444;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3px 15px;
+            font-size: 10px;
+        }
+
+        .cert-item {
+            color: #2c2c2c;
+            position: relative;
+            padding-left: 12px;
+        }
+
+        .cert-item:before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: #1a1a1a;
+            font-weight: bold;
+        }
+
+        .download-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: linear-gradient(135deg, #2c3e50 0%, #1a1a1a 100%);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .download-btn:hover {
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+
+        .download-btn:active {
+            transform: translateY(-1px);
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                padding: 0.4in 0.5in;
+            }
+
+            .download-btn {
+                display: none;
+            }
+        }
+
+        @page {
+            size: letter;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="header">
+            <div class="name">KARN CHAUDHARY</div>
+            <div class="tagline">AI/ML Developer | Data Scientist | Python Specialist</div>
+            <div class="contact">
+                Mathura, Uttar Pradesh | +91-7078117810 | karnchaudhary18@gmail.com<br>
+                LinkedIn: linkedin.com/in/karn-chaudhary | GitHub: github.com/karn-chaudhary
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <p class="summary">
+                Results-oriented AI/ML Developer with proven expertise in building production-ready machine learning models achieving 85-96% accuracy. Demonstrated success across 6+ technical internships, specializing in end-to-end ML pipeline development, predictive analytics, and data visualization. Proficient in Python, TensorFlow, and modern ML frameworks with strong foundation in algorithm optimization and model deployment. Track record of delivering data-driven solutions that improve operational efficiency and drive strategic decision-making.
+            </p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="item">
+                <div class="education-header">
+                    <div>
+                        <div class="degree">Bachelor of Computer Application (BCA) - AI & Machine Learning</div>
+                        <div class="university">Sanskriti University, Mathura, India</div>
+                    </div>
+                    <div class="date">July 2023 - May 2026</div>
+                </div>
+                <div class="coursework">
+                    <strong>Relevant Coursework:</strong> Machine Learning, Deep Learning, Data Structures & Algorithms, Database Management Systems, Python Programming, Java, Web Technologies, Artificial neural network, Natural language processing
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-container">
+                <div class="skill-label">Programming:</div>
+                <div class="skill-content">Python, Java, C, SQL</div>
+                
+                <div class="skill-label">ML/AI Frameworks:</div>
+                <div class="skill-content">TensorFlow, Keras, PyTorch, Scikit-learn, OpenCV, NLP Libraries</div>
+                
+                <div class="skill-label">Data Analysis:</div>
+                <div class="skill-content">Pandas, NumPy, Matplotlib, Seaborn,</div>
+                
+                <div class="skill-label">Visualization:</div>
+                <div class="skill-content">Tableau, Power BI, Excel, Interactive Dashboards</div>
+                
+                <div class="skill-label">Tools & Platforms:</div>
+                <div class="skill-content">Streamlit, Google Colab, GitHub, Jupyter Notebook, DBMS, Git Version Control</div>
+                
+                <div class="skill-label">Core Competencies:</div>
+                <div class="skill-content">Machine Learning, Deep Learning, Predictive Modeling, Data Mining, Model Deployment, Hyperparameter Tuning</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Professional Experience</div>
+            
+            <div class="item">
+                <div class="item-header">
+                    <div class="job-title">AI Powered Data Insight Intern</div>
+                    <div class="date">Aug 2025 - Sep 2025</div>
+                </div>
+                <div class="company">RIT by Excelerate</div>
+                <ul>
+                    <li>Engineered AI-driven data analysis pipelines processing complex datasets, extracting actionable business insights that improved decision-making efficiency by 30%</li>
+                    <li>Implemented predictive analytics models using advanced ML algorithms to forecast trends and optimize resource allocation</li>
+                    <li>Collaborated with cross-functional teams to translate business requirements into technical solutions</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <div class="job-title">AI & Data Analytics Intern</div>
+                    <div class="date">Jun 2025 - Jul 2025</div>
+                </div>
+                <div class="company">Edunet Foundation</div>
+                <ul>
+                    <li>Analyzed large-scale greenhouse emissions datasets with 100,000+ records, building predictive models using Random Forest and XGBoost algorithms</li>
+                    <li>Designed interactive dashboards with Tableau to visualize environmental trends, enabling stakeholder-driven policy decisions</li>
+                    <li>Performed comprehensive data cleaning, feature engineering, and statistical analysis to ensure model accuracy</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <div class="job-title">AI & Machine Learning Intern</div>
+                    <div class="date">May 2025 - Jun 2025</div>
+                </div>
+                <div class="company">Elevate Labs</div>
+                <ul>
+                    <li>Developed and optimized ML models for classification and regression achieving 85%+ accuracy through hyperparameter tuning and cross-validation</li>
+                    <li>Built complete ML pipelines including data preprocessing, feature selection, model training, and deployment using Python and Scikit-learn</li>
+                    <li>Implemented model evaluation frameworks using precision, recall, F1-score, and ROC-AUC metrics</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <div class="job-title">Data Visualization Intern</div>
+                    <div class="date">May 2025 - Jun 2025</div>
+                </div>
+                <div class="company">Saint Louis University by Excelerate</div>
+                <ul>
+                    <li>Created dynamic business intelligence dashboards using Tableau and Power BI, translating complex datasets into actionable visual insights</li>
+                    <li>Collaborated with business analysts to identify KPIs and design data-driven reporting solutions</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <div class="job-title">Python Development Intern</div>
+                    <div class="date">May 2024 - Jul 2024</div>
+                </div>
+                <div class="company">Hunar Intern</div>
+                <ul>
+                    <li>Developed Python applications including game logic systems and CAPTCHA generator, strengthening OOP and algorithm design skills</li>
+                    <li>Implemented efficient data structures and algorithms for string manipulation and randomization tasks</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Key Projects</div>
+            
+            <div class="item">
+                <div class="project-header">Human Emotion Detection from Voice | Python, Librosa, Scikit-learn, Streamlit</div>
+                <ul>
+                    <li>Built end-to-end speech emotion recognition system classifying 7 emotions with 85%+ accuracy using MFCC feature extraction</li>
+                    <li>Trained ensemble models combining SVM, Random Forest, and Neural Networks for robust emotion classification</li>
+                    <li>Deployed production-ready web application with Streamlit enabling real-time audio analysis and prediction</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="project-header">Email Spam Detection System | Python, NLP, Machine Learning</div>
+                <ul>
+                    <li>Developed NLP-based spam classifier achieving 96% accuracy using Naive Bayes, Random Forest, and TF-IDF vectorization</li>
+                    <li>Implemented text preprocessing pipeline including tokenization, stemming, and stop-word removal for optimal feature extraction</li>
+                    <li>Performed hyperparameter optimization using GridSearchCV to maximize model performance</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="project-header">YouTube Trending Analytics & Shark Tank Investment Dashboard | Tableau, Power BI, Python</div>
+                <ul>
+                    <li>Analyzed 50,000+ YouTube trending videos using Pandas, identifying engagement patterns and content strategy insights</li>
+                    <li>Built comprehensive Shark Tank investment dashboard analyzing 500+ deals, funding trends, and success rate metrics</li>
+                    <li>Implemented data aggregation and statistical analysis to derive actionable business intelligence</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- <div class="section">
+            <div class="section-title">Education</div>
+            <div class="item">
+                <div class="education-header">
+                    <div>
+                        <div class="degree">Bachelor of Computer Application (BCA) - AI & Machine Learning</div>
+                        <div class="university">Sanskriti University, Mathura, India</div>
+                    </div>
+                    <div class="date">July 2023 - May 2026</div>
+                </div>
+                <div class="coursework">
+                    <strong>Relevant Coursework:</strong> Machine Learning, Deep Learning, Data Structures & Algorithms, Database Management Systems, Statistical Analysis, Python Programming, Java, Web Technologies
+                </div>
+            </div>
+        </div> -->
+
+        <div class="section">
+            <div class="section-title">Certifications</div>
+            <div class="cert-grid">
+                <div class="cert-item">AI Powered Data Insights - RIT by Excelerate</div>
+                <div class="cert-item">Prompt Engineering - RIT by Excelerate</div>
+                <div class="cert-item">AI & Machine Learning - Elevate Labs</div>
+                <div class="cert-item">Data Analysis - Elevate Labs</div>
+                <div class="cert-item">AI & Data Analytics - Edunet Foundation</div>
+                <div class="cert-item">Python Development - Hunar Intern</div>
+                <div class="cert-item">Data Visualization - Saint Louis University</div>
+                <div class="cert-item">Project Management Associate - Saint Louis University</div>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="window.print()" class="download-btn">Download PDF</button>
+</body>
+</html>
